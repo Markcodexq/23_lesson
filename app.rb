@@ -25,11 +25,12 @@ post '/visit' do
 	@phone = params[:user_phone]
 	@date = params[:date_time]
 	@choise = params[:choise]
+	@color = params[:color]
 
-	@message = "Dear #{@user}, you will add to our system, phone is - #{@phone}, date - #{@date}, master - #{@choise}"
+	@message = "Dear #{@user}, you will add to our system, phone is - #{@phone}, date - #{@date}, master - #{@choise}, color - #{@color}"
 
 	f = File.open './public/users.txt', 'a'
-	f.write "User: #{@user}, Phone: #{@phone}, Date: #{@date}, Master: #{@choise}\n"
+	f.write "User: #{@user}, Phone: #{@phone}, Date: #{@date}, Master: #{@choise}, Color: #{@color}\n"
 	f.close
 
 	erb :visit
