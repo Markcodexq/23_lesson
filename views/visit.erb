@@ -1,0 +1,26 @@
+<h2>Записаться</h2>
+<p>На этой странице вы можете записаться к нашему мастеру.</p>
+<p> <%= @message %> </p>
+
+<form action="/visit" method="POST">
+  <div class="mb-3">
+    <label for="name" class="form-label">Your name</label>
+    <input type="text" class="form-control" id="name" placeholder="Enter your name" name="user_name">
+    <div id="emailHelp" class="form-text">We'll never share your name with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="phone" class="form-label">Your phone</label>
+    <input type="phone" class="form-control" id="phone" placeholder="8(9_ _)_ _ _-_ _-_ _" name="user_phone">
+  </div>
+  <div class="mb-3">
+    <label for="date" class="form-label">Date</label>
+    <input type="date" class="form-control" id="date" name="date_time">
+  </div> <br>
+  <select name="choise" class="form-select" aria-label="Default select example">
+  <option selected>Choose the master</option>
+  <option value="Walter">Walter White</option>
+  <option value="Jessie">Jessie Pinkman</option>
+  <option value="Gus">Gus Fring</option>
+</select><br>
+  <button type="submit" class="btn btn-primary">Записаться</button>
+</form>
